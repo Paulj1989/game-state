@@ -1,0 +1,487 @@
+team,leads,wins,draws,losses,points,points_per_lead,season,games
+Bayern Munich,28,25,2,1,77,2.75,2014,All Games
+VfL Wolfsburg,24,20,4,0,64,2.67,2014,All Games
+Borussia Mönchengladbach,24,19,2,3,59,2.46,2014,All Games
+Bayer 04 Leverkusen,22,17,5,0,56,2.55,2014,All Games
+FC Augsburg,16,15,1,0,46,2.88,2014,All Games
+FC Schalke 04,16,13,2,1,41,2.56,2014,All Games
+Borussia Dortmund,16,13,2,1,41,2.56,2014,All Games
+TSG 1899 Hoffenheim,18,12,4,2,40,2.22,2014,All Games
+Eintracht Frankfurt,20,11,4,5,37,1.85,2014,All Games
+SV Werder Bremen,16,11,3,2,36,2.25,2014,All Games
+1.FSV Mainz 05,17,9,5,3,32,1.88,2014,All Games
+1.FC Köln,14,9,1,4,28,2,2014,All Games
+Hannover 96,16,9,5,2,32,2,2014,All Games
+VfB Stuttgart,15,9,4,2,31,2.07,2014,All Games
+Hertha BSC,13,9,3,1,30,2.31,2014,All Games
+Hamburger SV,12,9,1,2,28,2.33,2014,All Games
+SC Freiburg,16,7,8,1,29,1.81,2014,All Games
+SC Paderborn 07,12,7,3,2,24,2,2014,All Games
+Bayern Munich,15,14,1,0,43,2.87,2014,Home Games
+VfL Wolfsburg,16,13,3,0,42,2.63,2014,Home Games
+Borussia Mönchengladbach,15,12,1,2,37,2.47,2014,Home Games
+Bayer 04 Leverkusen,12,10,2,0,32,2.67,2014,Home Games
+FC Augsburg,10,9,1,0,28,2.8,2014,Home Games
+FC Schalke 04,11,10,1,0,31,2.82,2014,Home Games
+Borussia Dortmund,10,9,1,0,28,2.8,2014,Home Games
+TSG 1899 Hoffenheim,13,9,2,2,29,2.23,2014,Home Games
+Eintracht Frankfurt,12,9,2,1,29,2.42,2014,Home Games
+SV Werder Bremen,10,8,1,1,25,2.5,2014,Home Games
+1.FSV Mainz 05,11,6,3,2,21,1.91,2014,Home Games
+1.FC Köln,6,4,1,1,13,2.17,2014,Home Games
+Hannover 96,11,6,3,2,21,1.91,2014,Home Games
+VfB Stuttgart,6,5,1,0,16,2.67,2014,Home Games
+Hertha BSC,8,6,2,0,20,2.5,2014,Home Games
+Hamburger SV,7,6,1,0,19,2.71,2014,Home Games
+SC Freiburg,9,5,3,1,18,2,2014,Home Games
+SC Paderborn 07,8,4,2,2,14,1.75,2014,Home Games
+Bayern Munich,13,11,1,1,34,2.62,2014,Away Games
+VfL Wolfsburg,8,7,1,0,22,2.75,2014,Away Games
+Borussia Mönchengladbach,9,7,1,1,22,2.44,2014,Away Games
+Bayer 04 Leverkusen,10,7,3,0,24,2.4,2014,Away Games
+FC Augsburg,6,6,0,0,18,3,2014,Away Games
+FC Schalke 04,5,3,1,1,10,2,2014,Away Games
+Borussia Dortmund,6,4,1,1,13,2.17,2014,Away Games
+TSG 1899 Hoffenheim,5,3,2,0,11,2.2,2014,Away Games
+Eintracht Frankfurt,8,2,2,4,8,1,2014,Away Games
+SV Werder Bremen,6,3,2,1,11,1.83,2014,Away Games
+1.FSV Mainz 05,6,3,2,1,11,1.83,2014,Away Games
+1.FC Köln,8,5,0,3,15,1.88,2014,Away Games
+Hannover 96,5,3,2,0,11,2.2,2014,Away Games
+VfB Stuttgart,9,4,3,2,15,1.67,2014,Away Games
+Hertha BSC,5,3,1,1,10,2,2014,Away Games
+Hamburger SV,5,3,0,2,9,1.8,2014,Away Games
+SC Freiburg,7,2,5,0,11,1.57,2014,Away Games
+SC Paderborn 07,4,3,1,0,10,2.5,2014,Away Games
+Bayern Munich,29,28,1,0,85,2.93,2015,All Games
+Borussia Dortmund,28,24,3,1,75,2.68,2015,All Games
+Bayer 04 Leverkusen,19,18,0,1,54,2.84,2015,All Games
+Borussia Mönchengladbach,20,17,2,1,53,2.65,2015,All Games
+FC Schalke 04,20,15,3,2,48,2.4,2015,All Games
+1.FSV Mainz 05,19,14,2,3,44,2.32,2015,All Games
+Hertha BSC,19,14,3,2,45,2.37,2015,All Games
+VfL Wolfsburg,19,12,4,3,40,2.11,2015,All Games
+1.FC Köln,16,10,5,1,35,2.19,2015,All Games
+Hamburger SV,17,11,3,3,36,2.12,2015,All Games
+FC Ingolstadt 04,18,10,6,2,36,2,2015,All Games
+FC Augsburg,19,9,5,5,32,1.68,2015,All Games
+SV Werder Bremen,16,10,2,4,32,2,2015,All Games
+SV Darmstadt 98,21,9,7,5,34,1.62,2015,All Games
+TSG 1899 Hoffenheim,18,9,5,4,32,1.78,2015,All Games
+Eintracht Frankfurt,12,9,1,2,28,2.33,2015,All Games
+VfB Stuttgart,15,9,2,4,29,1.93,2015,All Games
+Hannover 96,12,7,1,4,22,1.83,2015,All Games
+Bayern Munich,16,15,1,0,46,2.88,2015,Home Games
+Borussia Dortmund,16,14,2,0,44,2.75,2015,Home Games
+Bayer 04 Leverkusen,10,10,0,0,30,3,2015,Home Games
+Borussia Mönchengladbach,13,13,0,0,39,3,2015,Home Games
+FC Schalke 04,12,8,2,2,26,2.17,2015,Home Games
+1.FSV Mainz 05,9,8,0,1,24,2.67,2015,Home Games
+Hertha BSC,12,9,2,1,29,2.42,2015,Home Games
+VfL Wolfsburg,12,9,3,0,30,2.5,2015,Home Games
+1.FC Köln,8,5,2,1,17,2.13,2015,Home Games
+Hamburger SV,7,5,1,1,16,2.29,2015,Home Games
+FC Ingolstadt 04,11,7,4,0,25,2.27,2015,Home Games
+FC Augsburg,8,3,3,2,12,1.5,2015,Home Games
+SV Werder Bremen,8,5,2,1,17,2.13,2015,Home Games
+SV Darmstadt 98,7,2,3,2,9,1.29,2015,Home Games
+TSG 1899 Hoffenheim,11,6,4,1,22,2,2015,Home Games
+Eintracht Frankfurt,7,6,1,0,19,2.71,2015,Home Games
+VfB Stuttgart,9,6,1,2,19,2.11,2015,Home Games
+Hannover 96,8,4,0,4,12,1.5,2015,Home Games
+Bayern Munich,13,13,0,0,39,3,2015,Away Games
+Borussia Dortmund,12,10,1,1,31,2.58,2015,Away Games
+Bayer 04 Leverkusen,9,8,0,1,24,2.67,2015,Away Games
+Borussia Mönchengladbach,7,4,2,1,14,2,2015,Away Games
+FC Schalke 04,8,7,1,0,22,2.75,2015,Away Games
+1.FSV Mainz 05,10,6,2,2,20,2,2015,Away Games
+Hertha BSC,7,5,1,1,16,2.29,2015,Away Games
+VfL Wolfsburg,7,3,1,3,10,1.43,2015,Away Games
+1.FC Köln,8,5,3,0,18,2.25,2015,Away Games
+Hamburger SV,10,6,2,2,20,2,2015,Away Games
+FC Ingolstadt 04,7,3,2,2,11,1.57,2015,Away Games
+FC Augsburg,11,6,2,3,20,1.82,2015,Away Games
+SV Werder Bremen,8,5,0,3,15,1.88,2015,Away Games
+SV Darmstadt 98,14,7,4,3,25,1.79,2015,Away Games
+TSG 1899 Hoffenheim,7,3,1,3,10,1.43,2015,Away Games
+Eintracht Frankfurt,5,3,0,2,9,1.8,2015,Away Games
+VfB Stuttgart,6,3,1,2,10,1.67,2015,Away Games
+Hannover 96,4,3,1,0,10,2.5,2015,Away Games
+Bayern Munich,28,25,3,0,78,2.79,2016,All Games
+RB Leipzig,26,20,5,1,65,2.5,2016,All Games
+Borussia Dortmund,20,18,2,0,56,2.8,2016,All Games
+TSG 1899 Hoffenheim,24,16,6,2,54,2.25,2016,All Games
+1.FC Köln,18,12,6,0,42,2.33,2016,All Games
+Hertha BSC,19,15,3,1,48,2.53,2016,All Games
+SC Freiburg,20,14,5,1,47,2.35,2016,All Games
+SV Werder Bremen,20,13,2,5,41,2.05,2016,All Games
+Borussia Mönchengladbach,20,12,3,5,39,1.95,2016,All Games
+FC Schalke 04,18,11,5,2,38,2.11,2016,All Games
+Eintracht Frankfurt,15,11,2,2,35,2.33,2016,All Games
+Bayer 04 Leverkusen,15,11,2,2,35,2.33,2016,All Games
+FC Augsburg,14,9,4,1,31,2.21,2016,All Games
+Hamburger SV,17,10,4,3,34,2,2016,All Games
+1.FSV Mainz 05,15,10,2,3,32,2.13,2016,All Games
+VfL Wolfsburg,17,10,2,5,32,1.88,2016,All Games
+FC Ingolstadt 04,14,8,3,3,27,1.93,2016,All Games
+SV Darmstadt 98,11,7,1,3,22,2,2016,All Games
+Bayern Munich,15,13,2,0,41,2.73,2016,Home Games
+RB Leipzig,14,12,1,1,37,2.64,2016,Home Games
+Borussia Dortmund,13,13,0,0,39,3,2016,Home Games
+TSG 1899 Hoffenheim,15,11,4,0,37,2.47,2016,Home Games
+1.FC Köln,12,9,3,0,30,2.5,2016,Home Games
+Hertha BSC,14,12,1,1,37,2.64,2016,Home Games
+SC Freiburg,13,10,2,1,32,2.46,2016,Home Games
+SV Werder Bremen,11,8,0,3,24,2.18,2016,Home Games
+Borussia Mönchengladbach,11,7,2,2,23,2.09,2016,Home Games
+FC Schalke 04,11,8,2,1,26,2.36,2016,Home Games
+Eintracht Frankfurt,9,7,1,1,22,2.44,2016,Home Games
+Bayer 04 Leverkusen,9,5,2,2,17,1.89,2016,Home Games
+FC Augsburg,7,5,2,0,17,2.43,2016,Home Games
+Hamburger SV,11,8,3,0,27,2.45,2016,Home Games
+1.FSV Mainz 05,10,7,1,2,22,2.2,2016,Home Games
+VfL Wolfsburg,8,5,0,3,15,1.88,2016,Home Games
+FC Ingolstadt 04,8,4,3,1,15,1.88,2016,Home Games
+SV Darmstadt 98,8,6,1,1,19,2.38,2016,Home Games
+Bayern Munich,13,12,1,0,37,2.85,2016,Away Games
+RB Leipzig,12,8,4,0,28,2.33,2016,Away Games
+Borussia Dortmund,7,5,2,0,17,2.43,2016,Away Games
+TSG 1899 Hoffenheim,9,5,2,2,17,1.89,2016,Away Games
+1.FC Köln,6,3,3,0,12,2,2016,Away Games
+Hertha BSC,5,3,2,0,11,2.2,2016,Away Games
+SC Freiburg,7,4,3,0,15,2.14,2016,Away Games
+SV Werder Bremen,9,5,2,2,17,1.89,2016,Away Games
+Borussia Mönchengladbach,9,5,1,3,16,1.78,2016,Away Games
+FC Schalke 04,7,3,3,1,12,1.71,2016,Away Games
+Eintracht Frankfurt,6,4,1,1,13,2.17,2016,Away Games
+Bayer 04 Leverkusen,6,6,0,0,18,3,2016,Away Games
+FC Augsburg,7,4,2,1,14,2,2016,Away Games
+Hamburger SV,6,2,1,3,7,1.17,2016,Away Games
+1.FSV Mainz 05,5,3,1,1,10,2,2016,Away Games
+VfL Wolfsburg,9,5,2,2,17,1.89,2016,Away Games
+FC Ingolstadt 04,6,4,0,2,12,2,2016,Away Games
+SV Darmstadt 98,3,1,0,2,3,1,2016,Away Games
+Bayern Munich,30,27,2,1,83,2.77,2017,All Games
+FC Schalke 04,25,18,5,2,59,2.36,2017,All Games
+TSG 1899 Hoffenheim,26,15,7,4,52,2,2017,All Games
+Borussia Dortmund,21,15,5,1,50,2.38,2017,All Games
+Bayer 04 Leverkusen,21,15,5,1,50,2.38,2017,All Games
+RB Leipzig,24,15,5,4,50,2.08,2017,All Games
+VfB Stuttgart,18,15,2,1,47,2.61,2017,All Games
+Eintracht Frankfurt,19,14,5,0,47,2.47,2017,All Games
+Borussia Mönchengladbach,19,13,4,2,43,2.26,2017,All Games
+Hertha BSC,15,10,3,2,33,2.2,2017,All Games
+SV Werder Bremen,14,10,2,2,32,2.29,2017,All Games
+FC Augsburg,16,10,4,2,34,2.13,2017,All Games
+Hannover 96,14,10,3,1,33,2.36,2017,All Games
+1.FSV Mainz 05,13,9,1,3,28,2.15,2017,All Games
+SC Freiburg,12,8,3,1,27,2.25,2017,All Games
+VfL Wolfsburg,15,6,7,2,25,1.67,2017,All Games
+Hamburger SV,11,8,1,2,25,2.27,2017,All Games
+1.FC Köln,13,5,3,5,18,1.38,2017,All Games
+Bayern Munich,15,14,1,0,43,2.87,2017,Home Games
+FC Schalke 04,15,10,4,1,34,2.27,2017,Home Games
+TSG 1899 Hoffenheim,15,11,3,1,36,2.4,2017,Home Games
+Borussia Dortmund,13,9,3,1,30,2.31,2017,Home Games
+Bayer 04 Leverkusen,11,8,3,0,27,2.45,2017,Home Games
+RB Leipzig,15,9,4,2,31,2.07,2017,Home Games
+VfB Stuttgart,11,10,1,0,31,2.82,2017,Home Games
+Eintracht Frankfurt,11,8,3,0,27,2.45,2017,Home Games
+Borussia Mönchengladbach,12,9,2,1,29,2.42,2017,Home Games
+Hertha BSC,8,5,2,1,17,2.13,2017,Home Games
+SV Werder Bremen,9,6,2,1,20,2.22,2017,Home Games
+FC Augsburg,11,6,3,2,21,1.91,2017,Home Games
+Hannover 96,9,8,1,0,25,2.78,2017,Home Games
+1.FSV Mainz 05,9,7,0,2,21,2.33,2017,Home Games
+SC Freiburg,8,7,1,0,22,2.75,2017,Home Games
+VfL Wolfsburg,10,3,6,1,15,1.5,2017,Home Games
+Hamburger SV,8,6,0,2,18,2.25,2017,Home Games
+1.FC Köln,9,3,3,3,12,1.33,2017,Home Games
+Bayern Munich,15,13,1,1,40,2.67,2017,Away Games
+FC Schalke 04,10,8,1,1,25,2.5,2017,Away Games
+TSG 1899 Hoffenheim,11,4,4,3,16,1.45,2017,Away Games
+Borussia Dortmund,8,6,2,0,20,2.5,2017,Away Games
+Bayer 04 Leverkusen,10,7,2,1,23,2.3,2017,Away Games
+RB Leipzig,9,6,1,2,19,2.11,2017,Away Games
+VfB Stuttgart,7,5,1,1,16,2.29,2017,Away Games
+Eintracht Frankfurt,8,6,2,0,20,2.5,2017,Away Games
+Borussia Mönchengladbach,7,4,2,1,14,2,2017,Away Games
+Hertha BSC,7,5,1,1,16,2.29,2017,Away Games
+SV Werder Bremen,5,4,0,1,12,2.4,2017,Away Games
+FC Augsburg,5,4,1,0,13,2.6,2017,Away Games
+Hannover 96,5,2,2,1,8,1.6,2017,Away Games
+1.FSV Mainz 05,4,2,1,1,7,1.75,2017,Away Games
+SC Freiburg,4,1,2,1,5,1.25,2017,Away Games
+VfL Wolfsburg,5,3,1,1,10,2,2017,Away Games
+Hamburger SV,3,2,1,0,7,2.33,2017,Away Games
+1.FC Köln,4,2,0,2,6,1.5,2017,Away Games
+Bayern Munich,29,24,3,2,75,2.59,2018,All Games
+Borussia Dortmund,28,23,4,1,73,2.61,2018,All Games
+RB Leipzig,21,19,1,1,58,2.76,2018,All Games
+Bayer 04 Leverkusen,24,18,2,4,56,2.33,2018,All Games
+Borussia Mönchengladbach,19,16,2,1,50,2.63,2018,All Games
+VfL Wolfsburg,19,16,3,0,51,2.68,2018,All Games
+Eintracht Frankfurt,19,15,3,1,48,2.53,2018,All Games
+SV Werder Bremen,17,14,3,0,45,2.65,2018,All Games
+TSG 1899 Hoffenheim,26,13,10,3,49,1.88,2018,All Games
+Fortuna Düsseldorf,16,13,1,2,40,2.5,2018,All Games
+Hertha BSC,17,11,4,2,37,2.18,2018,All Games
+1.FSV Mainz 05,15,12,2,1,38,2.53,2018,All Games
+SC Freiburg,16,8,7,1,31,1.94,2018,All Games
+FC Schalke 04,10,8,1,1,25,2.5,2018,All Games
+FC Augsburg,17,8,4,5,28,1.65,2018,All Games
+VfB Stuttgart,10,7,3,0,24,2.4,2018,All Games
+Hannover 96,11,5,3,3,18,1.64,2018,All Games
+1.FC Nuremberg,9,3,4,2,13,1.44,2018,All Games
+Bayern Munich,16,13,3,0,42,2.63,2018,Home Games
+Borussia Dortmund,17,14,2,1,44,2.59,2018,Home Games
+RB Leipzig,10,10,0,0,30,3,2018,Home Games
+Bayer 04 Leverkusen,13,9,1,3,28,2.15,2018,Home Games
+Borussia Mönchengladbach,10,9,1,0,28,2.8,2018,Home Games
+VfL Wolfsburg,10,8,2,0,26,2.6,2018,Home Games
+Eintracht Frankfurt,11,8,2,1,26,2.36,2018,Home Games
+SV Werder Bremen,10,8,2,0,26,2.6,2018,Home Games
+TSG 1899 Hoffenheim,12,7,4,1,25,2.08,2018,Home Games
+Fortuna Düsseldorf,10,9,0,1,27,2.7,2018,Home Games
+Hertha BSC,10,6,3,1,21,2.1,2018,Home Games
+1.FSV Mainz 05,9,8,1,0,25,2.78,2018,Home Games
+SC Freiburg,11,6,5,0,23,2.09,2018,Home Games
+FC Schalke 04,4,4,0,0,12,3,2018,Home Games
+FC Augsburg,11,5,3,3,18,1.64,2018,Home Games
+VfB Stuttgart,7,6,1,0,19,2.71,2018,Home Games
+Hannover 96,5,5,0,0,15,3,2018,Home Games
+1.FC Nuremberg,7,3,3,1,12,1.71,2018,Home Games
+Bayern Munich,13,11,0,2,33,2.54,2018,Away Games
+Borussia Dortmund,11,9,2,0,29,2.64,2018,Away Games
+RB Leipzig,11,9,1,1,28,2.55,2018,Away Games
+Bayer 04 Leverkusen,11,9,1,1,28,2.55,2018,Away Games
+Borussia Mönchengladbach,9,7,1,1,22,2.44,2018,Away Games
+VfL Wolfsburg,9,8,1,0,25,2.78,2018,Away Games
+Eintracht Frankfurt,8,7,1,0,22,2.75,2018,Away Games
+SV Werder Bremen,7,6,1,0,19,2.71,2018,Away Games
+TSG 1899 Hoffenheim,14,6,6,2,24,1.71,2018,Away Games
+Fortuna Düsseldorf,6,4,1,1,13,2.17,2018,Away Games
+Hertha BSC,7,5,1,1,16,2.29,2018,Away Games
+1.FSV Mainz 05,6,4,1,1,13,2.17,2018,Away Games
+SC Freiburg,5,2,2,1,8,1.6,2018,Away Games
+FC Schalke 04,6,4,1,1,13,2.17,2018,Away Games
+FC Augsburg,6,3,1,2,10,1.67,2018,Away Games
+VfB Stuttgart,3,1,2,0,5,1.67,2018,Away Games
+Hannover 96,6,0,3,3,3,0.5,2018,Away Games
+1.FC Nuremberg,2,0,1,1,1,0.5,2018,Away Games
+Bayern Munich,30,26,3,1,81,2.7,2019,All Games
+Borussia Dortmund,27,21,4,2,67,2.48,2019,All Games
+RB Leipzig,22,18,4,0,58,2.64,2019,All Games
+Borussia Mönchengladbach,22,20,2,0,62,2.82,2019,All Games
+Bayer 04 Leverkusen,24,19,3,2,60,2.5,2019,All Games
+TSG 1899 Hoffenheim,19,15,4,0,49,2.58,2019,All Games
+VfL Wolfsburg,15,13,1,1,40,2.67,2019,All Games
+SC Freiburg,19,13,5,1,44,2.32,2019,All Games
+Eintracht Frankfurt,16,13,1,2,40,2.5,2019,All Games
+Hertha BSC,16,11,3,2,36,2.25,2019,All Games
+1.FC Union Berlin,17,12,3,2,39,2.29,2019,All Games
+FC Schalke 04,17,9,7,1,34,2,2019,All Games
+1.FSV Mainz 05,17,11,2,4,35,2.06,2019,All Games
+1.FC Köln,17,10,3,4,33,1.94,2019,All Games
+FC Augsburg,18,9,5,4,32,1.78,2019,All Games
+SV Werder Bremen,17,8,6,3,30,1.76,2019,All Games
+Fortuna Düsseldorf,16,6,6,4,24,1.5,2019,All Games
+SC Paderborn 07,9,4,2,3,14,1.56,2019,All Games
+Bayern Munich,14,13,1,0,40,2.86,2019,Home Games
+Borussia Dortmund,13,11,2,0,35,2.69,2019,Home Games
+RB Leipzig,11,7,4,0,25,2.27,2019,Home Games
+Borussia Mönchengladbach,13,12,1,0,37,2.85,2019,Home Games
+Bayer 04 Leverkusen,12,9,2,1,29,2.42,2019,Home Games
+TSG 1899 Hoffenheim,8,7,1,0,22,2.75,2019,Home Games
+VfL Wolfsburg,6,4,1,1,13,2.17,2019,Home Games
+SC Freiburg,11,9,1,1,28,2.55,2019,Home Games
+Eintracht Frankfurt,10,8,1,1,25,2.5,2019,Home Games
+Hertha BSC,8,6,0,2,18,2.25,2019,Home Games
+1.FC Union Berlin,11,8,2,1,26,2.36,2019,Home Games
+FC Schalke 04,11,5,6,0,21,1.91,2019,Home Games
+1.FSV Mainz 05,7,5,1,1,16,2.29,2019,Home Games
+1.FC Köln,11,6,2,3,20,1.82,2019,Home Games
+FC Augsburg,10,5,3,2,18,1.8,2019,Home Games
+SV Werder Bremen,4,2,2,0,8,2,2019,Home Games
+Fortuna Düsseldorf,9,4,4,1,16,1.78,2019,Home Games
+SC Paderborn 07,5,2,0,3,6,1.2,2019,Home Games
+Bayern Munich,16,13,2,1,41,2.56,2019,Away Games
+Borussia Dortmund,14,10,2,2,32,2.29,2019,Away Games
+RB Leipzig,11,11,0,0,33,3,2019,Away Games
+Borussia Mönchengladbach,9,8,1,0,25,2.78,2019,Away Games
+Bayer 04 Leverkusen,12,10,1,1,31,2.58,2019,Away Games
+TSG 1899 Hoffenheim,11,8,3,0,27,2.45,2019,Away Games
+VfL Wolfsburg,9,9,0,0,27,3,2019,Away Games
+SC Freiburg,8,4,4,0,16,2,2019,Away Games
+Eintracht Frankfurt,6,5,0,1,15,2.5,2019,Away Games
+Hertha BSC,8,5,3,0,18,2.25,2019,Away Games
+1.FC Union Berlin,6,4,1,1,13,2.17,2019,Away Games
+FC Schalke 04,6,4,1,1,13,2.17,2019,Away Games
+1.FSV Mainz 05,10,6,1,3,19,1.9,2019,Away Games
+1.FC Köln,6,4,1,1,13,2.17,2019,Away Games
+FC Augsburg,8,4,2,2,14,1.75,2019,Away Games
+SV Werder Bremen,13,6,4,3,22,1.69,2019,Away Games
+Fortuna Düsseldorf,7,2,2,3,8,1.14,2019,Away Games
+SC Paderborn 07,4,2,2,0,8,2,2019,Away Games
+Bayern Munich,28,24,3,1,75,2.68,2020,All Games
+RB Leipzig,25,19,4,2,61,2.44,2020,All Games
+Borussia Dortmund,25,20,2,3,62,2.48,2020,All Games
+VfL Wolfsburg,22,17,3,2,54,2.45,2020,All Games
+Eintracht Frankfurt,25,16,6,3,54,2.16,2020,All Games
+Bayer 04 Leverkusen,19,14,3,2,45,2.37,2020,All Games
+1.FC Union Berlin,21,12,8,1,44,2.1,2020,All Games
+Borussia Mönchengladbach,25,13,7,5,46,1.84,2020,All Games
+VfB Stuttgart,20,12,5,3,41,2.05,2020,All Games
+SC Freiburg,20,12,6,2,42,2.1,2020,All Games
+TSG 1899 Hoffenheim,16,11,4,1,37,2.31,2020,All Games
+1.FSV Mainz 05,18,10,5,3,35,1.94,2020,All Games
+FC Augsburg,14,10,2,2,32,2.29,2020,All Games
+Hertha BSC,16,8,4,4,28,1.75,2020,All Games
+Arminia Bielefeld,11,9,2,0,29,2.64,2020,All Games
+1.FC Köln,13,8,3,2,27,2.08,2020,All Games
+SV Werder Bremen,14,7,5,2,26,1.86,2020,All Games
+FC Schalke 04,8,3,3,2,12,1.5,2020,All Games
+Bayern Munich,15,13,2,0,41,2.73,2020,Home Games
+RB Leipzig,12,11,1,0,34,2.83,2020,Home Games
+Borussia Dortmund,13,11,1,1,34,2.62,2020,Home Games
+VfL Wolfsburg,11,10,1,0,31,2.82,2020,Home Games
+Eintracht Frankfurt,13,10,3,0,33,2.54,2020,Home Games
+Bayer 04 Leverkusen,11,8,2,1,26,2.36,2020,Home Games
+1.FC Union Berlin,14,8,6,0,30,2.14,2020,Home Games
+Borussia Mönchengladbach,13,8,3,2,27,2.08,2020,Home Games
+VfB Stuttgart,10,5,3,2,18,1.8,2020,Home Games
+SC Freiburg,12,7,4,1,25,2.08,2020,Home Games
+TSG 1899 Hoffenheim,9,8,1,0,25,2.78,2020,Home Games
+1.FSV Mainz 05,9,4,3,2,15,1.67,2020,Home Games
+FC Augsburg,8,6,2,0,20,2.5,2020,Home Games
+Hertha BSC,8,5,2,1,17,2.13,2020,Home Games
+Arminia Bielefeld,6,6,0,0,18,3,2020,Home Games
+1.FC Köln,6,3,2,1,11,1.83,2020,Home Games
+SV Werder Bremen,4,3,1,0,10,2.5,2020,Home Games
+FC Schalke 04,5,3,1,1,10,2,2020,Home Games
+Bayern Munich,13,11,1,1,34,2.62,2020,Away Games
+RB Leipzig,13,8,3,2,27,2.08,2020,Away Games
+Borussia Dortmund,12,9,1,2,28,2.33,2020,Away Games
+VfL Wolfsburg,11,7,2,2,23,2.09,2020,Away Games
+Eintracht Frankfurt,12,6,3,3,21,1.75,2020,Away Games
+Bayer 04 Leverkusen,8,6,1,1,19,2.38,2020,Away Games
+1.FC Union Berlin,7,4,2,1,14,2,2020,Away Games
+Borussia Mönchengladbach,12,5,4,3,19,1.58,2020,Away Games
+VfB Stuttgart,10,7,2,1,23,2.3,2020,Away Games
+SC Freiburg,8,5,2,1,17,2.13,2020,Away Games
+TSG 1899 Hoffenheim,7,3,3,1,12,1.71,2020,Away Games
+1.FSV Mainz 05,9,6,2,1,20,2.22,2020,Away Games
+FC Augsburg,6,4,0,2,12,2,2020,Away Games
+Hertha BSC,8,3,2,3,11,1.38,2020,Away Games
+Arminia Bielefeld,5,3,2,0,11,2.2,2020,Away Games
+1.FC Köln,7,5,1,1,16,2.29,2020,Away Games
+SV Werder Bremen,10,4,4,2,16,1.6,2020,Away Games
+FC Schalke 04,3,0,2,1,2,0.67,2020,Away Games
+Bayern Munich,30,24,3,3,75,2.5,2021,All Games
+Borussia Dortmund,27,22,2,3,68,2.52,2021,All Games
+Bayer 04 Leverkusen,25,19,3,3,60,2.4,2021,All Games
+RB Leipzig,21,17,3,1,54,2.57,2021,All Games
+1.FC Union Berlin,22,16,6,0,54,2.45,2021,All Games
+SC Freiburg,19,15,3,1,48,2.53,2021,All Games
+1.FC Köln,21,14,7,0,49,2.33,2021,All Games
+1.FSV Mainz 05,19,13,3,3,42,2.21,2021,All Games
+TSG 1899 Hoffenheim,20,13,3,4,42,2.1,2021,All Games
+Borussia Mönchengladbach,20,12,6,2,42,2.1,2021,All Games
+Eintracht Frankfurt,18,10,6,2,36,2,2021,All Games
+VfL Wolfsburg,18,12,2,4,38,2.11,2021,All Games
+VfL Bochum,15,12,2,1,38,2.53,2021,All Games
+FC Augsburg,13,10,1,2,31,2.38,2021,All Games
+VfB Stuttgart,14,7,5,2,26,1.86,2021,All Games
+Hertha BSC,16,9,4,3,31,1.94,2021,All Games
+Arminia Bielefeld,10,5,5,0,20,2,2021,All Games
+SpVgg Greuther Fürth,12,3,2,7,11,0.92,2021,All Games
+Bayern Munich,17,13,2,2,41,2.41,2021,Home Games
+Borussia Dortmund,15,13,0,2,39,2.6,2021,Home Games
+Bayer 04 Leverkusen,13,10,2,1,32,2.46,2021,Home Games
+RB Leipzig,12,11,0,1,33,2.75,2021,Home Games
+1.FC Union Berlin,12,10,2,0,32,2.67,2021,Home Games
+SC Freiburg,10,8,2,0,26,2.6,2021,Home Games
+1.FC Köln,11,9,2,0,29,2.64,2021,Home Games
+1.FSV Mainz 05,13,10,2,1,32,2.46,2021,Home Games
+TSG 1899 Hoffenheim,12,8,2,2,26,2.17,2021,Home Games
+Borussia Mönchengladbach,11,8,2,1,26,2.36,2021,Home Games
+Eintracht Frankfurt,7,4,2,1,14,2,2021,Home Games
+VfL Wolfsburg,10,7,0,3,21,2.1,2021,Home Games
+VfL Bochum,10,8,2,0,26,2.6,2021,Home Games
+FC Augsburg,8,7,1,0,22,2.75,2021,Home Games
+VfB Stuttgart,8,6,2,0,20,2.5,2021,Home Games
+Hertha BSC,10,6,3,1,21,2.1,2021,Home Games
+Arminia Bielefeld,6,2,4,0,10,1.67,2021,Home Games
+SpVgg Greuther Fürth,6,3,0,3,9,1.5,2021,Home Games
+Bayern Munich,13,11,1,1,34,2.62,2021,Away Games
+Borussia Dortmund,12,9,2,1,29,2.42,2021,Away Games
+Bayer 04 Leverkusen,12,9,1,2,28,2.33,2021,Away Games
+RB Leipzig,9,6,3,0,21,2.33,2021,Away Games
+1.FC Union Berlin,10,6,4,0,22,2.2,2021,Away Games
+SC Freiburg,9,7,1,1,22,2.44,2021,Away Games
+1.FC Köln,10,5,5,0,20,2,2021,Away Games
+1.FSV Mainz 05,6,3,1,2,10,1.67,2021,Away Games
+TSG 1899 Hoffenheim,8,5,1,2,16,2,2021,Away Games
+Borussia Mönchengladbach,9,4,4,1,16,1.78,2021,Away Games
+Eintracht Frankfurt,11,6,4,1,22,2,2021,Away Games
+VfL Wolfsburg,8,5,2,1,17,2.13,2021,Away Games
+VfL Bochum,5,4,0,1,12,2.4,2021,Away Games
+FC Augsburg,5,3,0,2,9,1.8,2021,Away Games
+VfB Stuttgart,6,1,3,2,6,1,2021,Away Games
+Hertha BSC,6,3,1,2,10,1.67,2021,Away Games
+Arminia Bielefeld,4,3,1,0,10,2.5,2021,Away Games
+SpVgg Greuther Fürth,6,0,2,4,2,0.33,2021,Away Games
+Bayern Munich,26,19,5,2,62,2.38,2022,All Games
+Borussia Dortmund,24,20,2,2,62,2.58,2022,All Games
+RB Leipzig,20,17,2,1,53,2.65,2022,All Games
+1.FC Union Berlin,20,16,4,0,52,2.6,2022,All Games
+SC Freiburg,21,16,4,1,52,2.48,2022,All Games
+Bayer 04 Leverkusen,18,14,3,1,45,2.5,2022,All Games
+VfL Wolfsburg,17,12,4,1,40,2.35,2022,All Games
+1.FSV Mainz 05,17,12,4,1,40,2.35,2022,All Games
+Eintracht Frankfurt,16,11,5,0,38,2.38,2022,All Games
+Borussia Mönchengladbach,17,10,5,2,35,2.06,2022,All Games
+1.FC Köln,12,9,2,1,29,2.42,2022,All Games
+SV Werder Bremen,17,10,2,5,32,1.88,2022,All Games
+FC Augsburg,18,9,4,5,31,1.72,2022,All Games
+TSG 1899 Hoffenheim,14,9,2,3,29,2.07,2022,All Games
+FC Schalke 04,8,7,1,0,22,2.75,2022,All Games
+VfB Stuttgart,12,6,4,2,22,1.83,2022,All Games
+VfL Bochum,12,8,3,1,27,2.25,2022,All Games
+Hertha BSC,11,6,5,0,23,2.09,2022,All Games
+Bayern Munich,13,10,3,0,33,2.54,2022,Home Games
+Borussia Dortmund,14,13,0,1,39,2.79,2022,Home Games
+RB Leipzig,13,11,1,1,34,2.62,2022,Home Games
+1.FC Union Berlin,12,9,3,0,30,2.5,2022,Home Games
+SC Freiburg,12,9,2,1,29,2.42,2022,Home Games
+Bayer 04 Leverkusen,11,8,2,1,26,2.36,2022,Home Games
+VfL Wolfsburg,8,5,2,1,17,2.13,2022,Home Games
+1.FSV Mainz 05,10,6,3,1,21,2.1,2022,Home Games
+Eintracht Frankfurt,10,7,3,0,24,2.4,2022,Home Games
+Borussia Mönchengladbach,10,9,1,0,28,2.8,2022,Home Games
+1.FC Köln,7,5,1,1,16,2.29,2022,Home Games
+SV Werder Bremen,10,5,1,4,16,1.6,2022,Home Games
+FC Augsburg,10,6,3,1,21,2.1,2022,Home Games
+TSG 1899 Hoffenheim,8,6,1,1,19,2.38,2022,Home Games
+FC Schalke 04,6,5,1,0,16,2.67,2022,Home Games
+VfB Stuttgart,7,5,2,0,17,2.43,2022,Home Games
+VfL Bochum,8,6,2,0,20,2.5,2022,Home Games
+Hertha BSC,9,5,4,0,19,2.11,2022,Home Games
+Bayern Munich,13,9,2,2,29,2.23,2022,Away Games
+Borussia Dortmund,10,7,2,1,23,2.3,2022,Away Games
+RB Leipzig,7,6,1,0,19,2.71,2022,Away Games
+1.FC Union Berlin,8,7,1,0,22,2.75,2022,Away Games
+SC Freiburg,9,7,2,0,23,2.56,2022,Away Games
+Bayer 04 Leverkusen,7,6,1,0,19,2.71,2022,Away Games
+VfL Wolfsburg,9,7,2,0,23,2.56,2022,Away Games
+1.FSV Mainz 05,7,6,1,0,19,2.71,2022,Away Games
+Eintracht Frankfurt,6,4,2,0,14,2.33,2022,Away Games
+Borussia Mönchengladbach,7,1,4,2,7,1,2022,Away Games
+1.FC Köln,5,4,1,0,13,2.6,2022,Away Games
+SV Werder Bremen,7,5,1,1,16,2.29,2022,Away Games
+FC Augsburg,8,3,1,4,10,1.25,2022,Away Games
+TSG 1899 Hoffenheim,6,3,1,2,10,1.67,2022,Away Games
+FC Schalke 04,2,2,0,0,6,3,2022,Away Games
+VfB Stuttgart,5,1,2,2,5,1,2022,Away Games
+VfL Bochum,4,2,1,1,7,1.75,2022,Away Games
+Hertha BSC,2,1,1,0,4,2,2022,Away Games
