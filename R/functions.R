@@ -11,7 +11,7 @@ theme_ftw <-
       ggplot2::theme(
         # plot elements
         plot.background = element_rect(fill = "white", color = "white"),
-        plot.margin = margin(25, 75, 25, 45),
+        plot.margin = margin(25, 45, 25, 45),
         # text elements
         plot.title = ggtext::element_markdown(
           size = rel(1.7),
@@ -149,8 +149,8 @@ transform_game_state_data <- function(data, team = NULL) {
         levels = c("Winning", "Drawing", "Losing")
       )
     ) |>
-    group_by(team, season, game_state) |>
-    summarise(across(shots:mins, ~ sum(.x))) |>
+    summarise(across(shots:mins, ~ sum(.x)),
+              .by = c(team, season, game_state)) |>
     mutate(
       across(shots:xG_against, ~ .x / (mins / 90)),
       goal_diff = goals - goals_against,
@@ -172,11 +172,15 @@ transform_timing_data <-
         goals_against = against.goals,
         xG_against = against.xG
       ) |>
-      group_by(team, season, timing) |>
       mutate(
-        goal_diff = goals - goals_against,
-        xG_diff = xG - xG_against,
-        shot_diff = shots - shots_against
+        goal_diff = (goals - goals_against)/34,
+        xG_diff = (xG - xG_against)/34,
+        shot_diff = (shots - shots_against)/34,
+        timing = case_when(
+          timing == "1-15" ~ "1-15\nmins",
+          .default = timing
+        ),
+        .by = c(team, season, timing)
       )
   }
 
@@ -194,21 +198,23 @@ plot_bvb_stats <-
       mutate(
         stat = recode(
           stat,
-          "goal_diff" = "Goals",
-          "xG_diff" = "xG",
-          "shot_diff" = "Shots"
+          "goal_diff" = "Goal Difference /90",
+          "xG_diff" = "xG Difference /90",
+          "shot_diff" = "Shot Difference /90"
         ),
-        stat = factor(stat, levels = c("Shots", "Goals", "xG"))
+        stat = factor(stat, levels = c("Shot Difference /90", 
+                                       "Goal Difference /90", 
+                                       "xG Difference /90"))
       ) |>
       ggplot(aes(season, value, colour = game_state)) +
       geom_hline(yintercept = 0, colour = "grey20",
                  linetype = "dashed", linewidth = 1) +
       geom_smooth(
         method = lm, formula = y ~ splines::bs(x), se = FALSE,
-        linewidth = 1.2, alpha = .5
+        linewidth = 1.2, alpha = 1
       ) +
       geom_point(aes(fill = game_state),
-        shape = 21, size = 6, alpha = .7,
+        shape = 21, size = 7, alpha = 1,
         stroke = 1, colour = "grey20"
       ) +
       facet_wrap(vars(stat), scales = "free_y") +
@@ -224,20 +230,19 @@ plot_bvb_stats <-
           "State, 2014/15 - 2022/23"
         ),
         subtitle = glue(
-          "While BVB's xGDiff/90 (xG for – XG against) when drawing and ",
-          "losing has remained relatively constant from 2014/15 to 2022/23, ",
-          "their xGDiff when winning has declined,<br>even dropping below the ",
-          "xGDiff when drawing in four of the last five seasons. Although ",
-          "BVB's xGDiff rarely drops below 0 in any game state, their mean ",
-          "average xGDiff<br>across all game states dropped from ~1 before the ",
-          "2018/19 season to ~0.5 after, and that is driven by the decline ",
-          "when BVB are winning (from 1.65 to ~0.45)."
+          "BVB's goal and xG difference are better when they are winning or ",
+          "drawing, and the former tends to be significantly worse ",
+          "when losing, while their shot difference is the complete opposite. ",
+          "Last season, BVB<br>improved significantly when winning or drawing, ",
+          "making particularly big improvements when winning. When losing, ",
+          "on the other hand, Dortmund's performances took a significant dive, across ",
+          "every metric."
         ),
         caption = glue(
           "Source: Understat (via worldfootballR) | ",
           "Graphic: Paul Johnson (@paul_johnson89)"
         ),
-        x = NULL, y = "Difference /90"
+        x = NULL, y = NULL
       ) +
       theme_ftw() +
       theme(
@@ -274,11 +279,11 @@ plot_buli_stats <-
           .default = "#dee2e6"
         ),
         team_alpha = case_when(
-          team %in% c("Bayern Munich", "Borussia Dortmund") ~ .8,
+          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 1,
           .default = .2
         ),
         team_size = case_when(
-          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 6,
+          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 7,
           .default = 4
         )
       ) |>
@@ -380,26 +385,17 @@ plot_buli_points <- function(data) {
 
   (p1 | p2 | p3) +
     plot_annotation(
-      title = glue(
-        "Points Dropped from Winning Positions ",
-        "by Bundesliga Teams in the 2022/23 Season"
-      ),
+      title = "Points Dropped from Winning Positions by Bundesliga Teams, 2022/23",
       subtitle = glue(
-        "<b style='color:#ffa600;'>Borussia Dortmund</b> have actually ",
-        "dropped relatively few points from winning positions over all games ",
-        "so far this season. However, when we split the dropped points by ",
-        "home and away games, it's clear that<br>the total games disguises ",
-        "some of the variance going on. BVB drop very few points at home, but ",
-        "have dropped the sixth highest points in the league when not playing ",
-        "at the Westfalenstadion. Of course, all<br>this is overshadowed by ",
-        "<b style='color:#DB4254;'>Bayern Munich</b>'s uncharacteristically ",
-        "poor grip on games they are winning. Bayern have dropped more points ",
-        "than BVB, both home and away. That's not very _Mia San Mia_ at all!"
+        "<b style='color:#ffa600;'>Borussia Dortmund</b> dropped relatively ",
+        "few points from winning positions last season, though they were much ",
+        "stronger at home, dropping only three points, versus seven points ",
+        "away from home.<br>All this is overshadowed by <b style='color:#DB4254;'>",
+        "Bayern Munich</b>'s uncharacteristically poor grip on winning positions. ",
+        "Bayern dropped more points from winning positions than Borussia ",
+        "Dortmund, both home and away."
       ),
-      caption = glue(
-        "Source: Transfermarkt | ",
-        "Graphic: Paul Johnson (@paul_johnson89)"
-      ),
+      caption = "Source: Transfermarkt | Graphic: Paul Johnson (@paul_johnson89)",
       theme = theme_ftw()
     )
 
@@ -466,16 +462,13 @@ plot_leads <-
           "Results from Winning Positions, 2014/15 - 2022/23"
         ),
         subtitle = glue(
-          "BVB embraced their draws era in 2017/18 but on the whole they are ",
-          "pretty consistent over this period. This season they are seeing ",
-          "out the win a little better than in previous seasons, in ",
-          "particular then<br>are losing fewer games from winning positions ",
-          "than in the last three seasons. Meanwhile, Bayern have become less ",
-          "reliable in the last couple seasons, and are having a particularly ",
-          "bad time this season.<br>They have dropped points in ~25% of all ",
-          "Bundesliga games so far this season, seemingly at risk of turning ",
-          "three points into one more often than at any other season in this ",
-          "period."
+          "Despite a lot of draws in 2017/18, Dortmund have been pretty ",
+          "consistent when holding a lead, giving up more than 25% of winning ",
+          "positions just once. Last season, BVB dropped relatively few points ",
+          "from<br>winning positions, while Bayern Munich dropped points from ",
+          "~25% of all winning positions. Bayern's grip on leads has loosened ",
+          "a little in recent years, with the last two seasons being their ",
+          "worst in this area."
         ),
         caption = glue(
           "Source: Transfermarkt | ",
@@ -492,7 +485,8 @@ plot_leads <-
 plot_deficits <-
   function(data) {
     p1 <- plot_results(data, "Borussia Dortmund")
-    p2 <- plot_results(data, "Bayern Munich")
+    p2 <- plot_results(data, "Bayern Munich") +
+      theme(axis.text.y = element_blank())
 
     (p1 | p2) +
       plot_annotation(
@@ -501,22 +495,16 @@ plot_deficits <-
           "<b style='color:#DB4254;'>Bayern Munich</b>'s Bundesliga ",
           "Results from Losing Positions, 2014/15 - 2022/23"
         ),
-        # subtitle = glue(
-        #   "BVB embraced their draws era in 2017/18 but on the whole they are ",
-        #   "pretty consistent over this period. This season they are seeing ",
-        #   "out the win a little better than in previous seasons, in ",
-        #   "particular then<br>are losing fewer games from winning positions ",
-        #   "than in the last three seasons. Meanwhile, Bayern have become less ",
-        #   "reliable in the last couple seasons, and are having a particularly ",
-        #   "bad time this season.<br>They have dropped points in ~25% of all ",
-        #   "Bundesliga games so far this season, seemingly at risk of turning ",
-        #   "three points into one more often than at any other season in this ",
-        #   "period."
-        # ),
-        caption = glue(
-          "Source: Transfermarkt | ",
-          "Graphic: Paul Johnson (@paul_johnson89)"
+        subtitle = glue(
+          "Despite variance in the proportion of deficits that both turn ",
+          "around, BVB usually end up worse off than Bayern. Dortmund ",
+          "overcame more than 50% of deficits three times, compared with ",
+          "Bayern's six. Last<br>season, however, Bayern claimed points from ",
+          "~44% of deficits compared with Dortmund's ~42%. Bayern have ",
+          "seemingly declined in recent seasons, while BVB have remained ",
+          "relatively steady in that time."
         ),
+        caption = "Source: Transfermarkt | Graphic: Paul Johnson (@paul_johnson89)",
         theme = theme_ftw(grid_y = FALSE, grid_x = FALSE)
       )
 
@@ -547,12 +535,12 @@ plot_comebacks <-
           .default = "#dee2e6"
         ),
         team_alpha = case_when(
-          team %in% c("Bayern Munich", "Borussia Dortmund") ~ .8,
+          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 1,
           .default = .2
         ),
         team_size = case_when(
-          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 6,
-          .default = 4
+          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 7,
+          .default = 5
         )
       ) |>
       ggplot(aes(season, percent)) +
@@ -578,14 +566,20 @@ plot_comebacks <-
       scale_y_continuous(labels = scales::label_percent()) +
       labs(
         title = glue::glue(
-          "Percentage of Losing Positions that Bundesliga Teams Turn Around ",
+          "Percentage of Deficits that Bundesliga Teams Reverse ",
           "to Win or Draw, 2014/15 - 2022/23"
         ),
-        caption = glue::glue(
-          "Source: Transfermarkt | ",
-          "Graphic: Paul Johnson (@paul_johnson89)"
+        subtitle = glue::glue(
+          "<b style='color:#DB4254;'>Bayern Munich</b> have been winning ",
+          "fewer games from losing positions in recent seasons, levelling ",
+          "things up between them and <b style='color:#ffa600;'>Borussia ",
+          "Dortmund</b>, but are still overturning more deficits overall. Both<br>",
+          "are closer to league average in recent seasons, suggesting the ",
+          "Bundesliga is a little more competitive right now (though it's not clear ",
+          "if they are getting worse or the rest of the league is getting better)."
         ),
-        x = NULL, y = glue::glue("% of Total Deficits")
+        caption = "Source: Transfermarkt | Graphic: Paul Johnson (@paul_johnson89)",
+        x = NULL, y = "% of Total Deficits"
       ) +
       theme_ftw() +
       theme(axis.text.x = element_text(angle = 30, vjust = 0.5, hjust = 0.5))
@@ -597,48 +591,75 @@ plot_comebacks <-
 
 plot_timing_distributions <-
   function(data) {
-    data |>
-      filter(season == 2022) |>
+    data |> 
+      filter(season == 2022) |> 
       mutate(
         team = case_when(
           team == "Bayern Munich" ~ "Bayern Munich",
           team == "Borussia Dortmund" ~ "Borussia Dortmund",
-          .default = "Bundesliga Average"
+          .default = "Rest of the Bundesliga"
         ),
-        team = factor(team, levels = c(
-          "Bayern Munich",
-          "Borussia Dortmund",
-          "Bundesliga Average"
-        ))
-      ) |>
-      group_by(team, timing) |>
-      summarise(across(goal_diff:shot_diff, ~ mean(.x))) |>
+        team = factor(team, levels = c("Bayern Munich",
+                                       "Borussia Dortmund",
+                                       "Rest of the Bundesliga"))
+      ) |> 
       tidyr::pivot_longer(
         cols = ends_with("diff"),
         names_to = "stat"
-      ) |>
+      ) |> 
       mutate(
-        stat = recode(stat,
-          goal_diff = "Goals",
-          xG_diff = "xG",
-          shot_diff = "Shots"
+        stat = recode(stat, 
+                      goal_diff = "Goal Difference /90",
+                      xG_diff = "xG Difference /90",
+                      shot_diff = "Shot Difference /90"),
+        stat = factor(stat, levels = c("Shot Difference /90", 
+                                       "Goal Difference /90",
+                                       "xG Difference /90")),
+        team_colours = case_when(
+          team == "Bayern Munich" ~ "#DB4254",
+          team == "Borussia Dortmund" ~ "#ffa600",
+          .default = "#dee2e6"
         ),
-        stat = factor(stat, levels = c("Shots", "Goals", "xG"))
-      ) |>
-      ggplot(aes(timing, value, fill = team)) +
-      geom_col(position = "dodge", alpha = 0.8, colour = "grey20") +
-      geom_hline(yintercept = 0, colour = "grey20", linewidth = 1) +
+        point_alpha = case_when(
+          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 1,
+          .default = .2
+        ),
+        line_alpha = case_when(
+          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 1,
+          .default = 0
+        ),
+        team_size = case_when(
+          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 8,
+          .default = 4
+        )
+      ) |> 
+      ggplot(aes(timing, value)) +
+      geom_hline(yintercept = 0, colour = "grey20",
+                 linetype = "dashed", linewidth = 1) +
+      geom_line(aes(group = team, alpha = line_alpha), colour = "grey20")+
+      geom_point(aes(fill = team_colours, alpha = point_alpha, size = team_size), 
+                 shape = 21, stroke = 1) +
       facet_wrap(vars(stat), scales = "free_y") +
-      scale_fill_manual(values = c("#DB4254", "#ffa600", "#dee2e6")) +
+      scale_fill_identity() +
+      scale_alpha_identity() +
+      scale_size_identity() +
       labs(
         title = glue::glue(
           "Bundesliga Performances (Shots, Goals, and xG ",
-          "Difference) by Game Timings in the 2022/2023 Season"
+          "Difference) by Game Minutes, 2022/23"
         ),
-        x = NULL, y = "Difference"
-      ) +
-      theme_ftw() +
-      theme(axis.text.x = element_text(angle = 30, vjust = 0.5, hjust = 0.5))
+        subtitle = glue::glue(
+          "<b style='color:#ffa600;'>Borussia Dortmund</b> & <b style='color:",
+          "#DB4254;'>Bayern Munich</b> outperformed the league average across ",
+          "all three metrics last season. However, the change in Bayern's goal ",
+          "difference between halves is striking. Their goal difference<br>",
+          "in the first half of games was sky high, but it plummets in the second ",
+          "half. Dortmund's xG difference also drops off in the second half, ",
+          "but it bounces back to a BVB game high in the final ",
+          "15 minutes of games."
+        ),
+        x = NULL, y = NULL) +
+      theme_ftw()
     
     ggsave(here::here("figures", "timings.png"),
            dpi = 320, width = 20, height = 10)
@@ -667,7 +688,7 @@ plot_timing_splits <-
           .default = "#dee2e6"
         ),
         team_alpha = case_when(
-          team %in% c("Bayern Munich", "Borussia Dortmund") ~ .8,
+          team %in% c("Bayern Munich", "Borussia Dortmund") ~ 1,
           .default = .2
         ),
         team_size = case_when(
@@ -685,7 +706,7 @@ plot_timing_splits <-
       geom_point(aes(fill = team_colours, alpha = team_alpha, size = team_size),
                  shape = 21, stroke = 1
       ) +
-      facet_wrap(vars(timing), scales = "free_y") +
+      facet_wrap(vars(timing)) +
       scale_colour_identity() +
       scale_fill_identity() +
       scale_alpha_identity() +
@@ -700,7 +721,7 @@ plot_timing_splits <-
       labs(
         title = glue(
           "Bundesliga Performance (Measured Using {label} ",
-          "Difference) by Game Timings, 2014/15 - 2022/23"
+          "Difference) by Game Minutes, 2014/15 - 2022/23"
         ),
         subtitle = subtitle,
         caption = glue(
