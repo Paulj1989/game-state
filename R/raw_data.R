@@ -14,7 +14,8 @@ buli_meta <-
 buli_team_stats <-
   worldfootballR::understat_team_stats_breakdown(
     team_urls = buli_meta$url
-  )
+  ) |> 
+  dplyr::filter(season_start_year != 2023)
 
 # readr::write_csv(buli_shots, here::here("data", "buli_shots.csv"))
 readr::write_csv(buli_team_stats, here::here("data", "buli_team_stats.csv"))
