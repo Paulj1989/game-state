@@ -150,7 +150,8 @@ transform_game_state_data <- function(data, team = NULL) {
       )
     ) |>
     summarise(across(shots:mins, ~ sum(.x)),
-              .by = c(team, season, game_state)) |>
+      .by = c(team, season, game_state)
+    ) |>
     mutate(
       across(shots:xG_against, ~ .x / (mins / 90)),
       goal_diff = goals - goals_against,
@@ -173,9 +174,9 @@ transform_timing_data <-
         xG_against = against.xG
       ) |>
       mutate(
-        goal_diff = (goals - goals_against)/34,
-        xG_diff = (xG - xG_against)/34,
-        shot_diff = (shots - shots_against)/34,
+        goal_diff = (goals - goals_against) / 34,
+        xG_diff = (xG - xG_against) / 34,
+        shot_diff = (shots - shots_against) / 34,
         timing = case_when(
           timing == "1-15" ~ "1-15\nmins",
           .default = timing
@@ -202,19 +203,23 @@ plot_bvb_stats <-
           "xG_diff" = "xG Difference /90",
           "shot_diff" = "Shot Difference /90"
         ),
-        stat = factor(stat, levels = c("Shot Difference /90", 
-                                       "Goal Difference /90", 
-                                       "xG Difference /90"))
+        stat = factor(stat, levels = c(
+          "Shot Difference /90",
+          "Goal Difference /90",
+          "xG Difference /90"
+        ))
       ) |>
       ggplot(aes(season, value, colour = game_state)) +
-      geom_hline(yintercept = 0, colour = "grey20",
-                 linetype = "dashed", linewidth = 1) +
+      geom_hline(
+        yintercept = 0, colour = "grey20",
+        linetype = "dashed", linewidth = 1
+      ) +
       geom_smooth(
         method = lm, formula = y ~ splines::bs(x), se = FALSE,
         linewidth = 1.2, alpha = 1
       ) +
       geom_point(aes(fill = game_state),
-        shape = 21, size = 7, alpha = 1,
+        shape = 21, size = 7, alpha = .9,
         stroke = 1, colour = "grey20"
       ) +
       facet_wrap(vars(stat), scales = "free_y") +
@@ -288,8 +293,10 @@ plot_buli_stats <-
         )
       ) |>
       ggplot(aes(season, !!stat)) +
-      geom_hline(yintercept = 0, colour = "grey20",
-                 linetype = "dashed", linewidth = 1) +
+      geom_hline(
+        yintercept = 0, colour = "grey20",
+        linetype = "dashed", linewidth = 1
+      ) +
       geom_smooth(aes(colour = team_colours, alpha = team_alpha),
         method = lm, formula = y ~ splines::bs(x),
         se = FALSE, linewidth = 1.2
@@ -395,7 +402,10 @@ plot_buli_points <- function(data) {
         "Bayern dropped more points from winning positions than Borussia ",
         "Dortmund, both home and away."
       ),
-      caption = "Source: Transfermarkt | Graphic: Paul Johnson (@paul_johnson89)",
+      caption = glue(
+        "Source: Transfermarkt (via worldfootballR) | ",
+        "Graphic: Paul Johnson (@paul_johnson89)"
+      ),
       theme = theme_ftw()
     )
 
@@ -436,11 +446,7 @@ plot_results <-
       geom_hline(yintercept = 0, linewidth = 1, colour = "grey10") +
       coord_flip() +
       labs(
-        x = NULL, y = if_else(
-          as_label(data) == "leads",
-          "Proportion of Leads",
-          "Proportion of Deficits"
-        )
+        x = NULL, y = "Proportion of Games"
       ) +
       theme_ftw(grid_y = FALSE, grid_x = TRUE) +
       theme(
@@ -471,7 +477,7 @@ plot_leads <-
           "worst in this area."
         ),
         caption = glue(
-          "Source: Transfermarkt | ",
+          "Source: Transfermarkt (via worldfootballR) | ",
           "Graphic: Paul Johnson (@paul_johnson89)"
         ),
         theme = theme_ftw(grid_y = FALSE, grid_x = FALSE)
@@ -504,7 +510,10 @@ plot_deficits <-
           "seemingly declined in recent seasons, while BVB have remained ",
           "relatively steady in that time."
         ),
-        caption = "Source: Transfermarkt | Graphic: Paul Johnson (@paul_johnson89)",
+        caption = glue(
+          "Source: Transfermarkt (via worldfootballR) | ",
+          "Graphic: Paul Johnson (@paul_johnson89)"
+        ),
         theme = theme_ftw(grid_y = FALSE, grid_x = FALSE)
       )
 
@@ -578,7 +587,10 @@ plot_comebacks <-
           "Bundesliga is a little more competitive right now (though it's not clear ",
           "if they are getting worse or the rest of the league is getting better)."
         ),
-        caption = "Source: Transfermarkt | Graphic: Paul Johnson (@paul_johnson89)",
+        caption = glue(
+          "Source: Transfermarkt (via worldfootballR) | ",
+          "Graphic: Paul Johnson (@paul_johnson89)"
+        ),
         x = NULL, y = "% of Total Deficits"
       ) +
       theme_ftw() +
@@ -591,30 +603,35 @@ plot_comebacks <-
 
 plot_timing_distributions <-
   function(data) {
-    data |> 
-      filter(season == 2022) |> 
+    data |>
+      filter(season == 2022) |>
       mutate(
         team = case_when(
           team == "Bayern Munich" ~ "Bayern Munich",
           team == "Borussia Dortmund" ~ "Borussia Dortmund",
           .default = "Rest of the Bundesliga"
         ),
-        team = factor(team, levels = c("Bayern Munich",
-                                       "Borussia Dortmund",
-                                       "Rest of the Bundesliga"))
-      ) |> 
+        team = factor(team, levels = c(
+          "Bayern Munich",
+          "Borussia Dortmund",
+          "Rest of the Bundesliga"
+        ))
+      ) |>
       tidyr::pivot_longer(
         cols = ends_with("diff"),
         names_to = "stat"
-      ) |> 
+      ) |>
       mutate(
-        stat = recode(stat, 
-                      goal_diff = "Goal Difference /90",
-                      xG_diff = "xG Difference /90",
-                      shot_diff = "Shot Difference /90"),
-        stat = factor(stat, levels = c("Shot Difference /90", 
-                                       "Goal Difference /90",
-                                       "xG Difference /90")),
+        stat = recode(stat,
+          goal_diff = "Goal Difference /90",
+          xG_diff = "xG Difference /90",
+          shot_diff = "Shot Difference /90"
+        ),
+        stat = factor(stat, levels = c(
+          "Shot Difference /90",
+          "Goal Difference /90",
+          "xG Difference /90"
+        )),
         team_colours = case_when(
           team == "Bayern Munich" ~ "#DB4254",
           team == "Borussia Dortmund" ~ "#ffa600",
@@ -632,13 +649,16 @@ plot_timing_distributions <-
           team %in% c("Bayern Munich", "Borussia Dortmund") ~ 8,
           .default = 4
         )
-      ) |> 
+      ) |>
       ggplot(aes(timing, value)) +
-      geom_hline(yintercept = 0, colour = "grey20",
-                 linetype = "dashed", linewidth = 1) +
-      geom_line(aes(group = team, alpha = line_alpha), colour = "grey20")+
-      geom_point(aes(fill = team_colours, alpha = point_alpha, size = team_size), 
-                 shape = 21, stroke = 1) +
+      geom_hline(
+        yintercept = 0, colour = "grey20",
+        linetype = "dashed", linewidth = 1
+      ) +
+      geom_line(aes(group = team, alpha = line_alpha), colour = "grey20") +
+      geom_point(aes(fill = team_colours, alpha = point_alpha, size = team_size),
+        shape = 21, stroke = 1
+      ) +
       facet_wrap(vars(stat), scales = "free_y") +
       scale_fill_identity() +
       scale_alpha_identity() +
@@ -658,16 +678,21 @@ plot_timing_distributions <-
           "but it bounces back to a BVB game high in the final ",
           "15 minutes of games."
         ),
-        x = NULL, y = NULL) +
+        caption = glue(
+          "Source: Understat (via worldfootballR) | ",
+          "Graphic: Paul Johnson (@paul_johnson89)"
+        ),
+        x = NULL, y = NULL
+      ) +
       theme_ftw()
-    
+
     ggsave(here::here("figures", "timings.png"),
-           dpi = 320, width = 20, height = 10)
+      dpi = 320, width = 20, height = 10
+    )
   }
 
 plot_timing_splits <-
   function(data, stat, subtitle) {
-    
     stat <- enquo(stat)
     label <- if (rlang::as_name(stat) != "xG_diff") {
       str_to_title(str_remove(as_label(stat), "_diff"))
@@ -679,7 +704,7 @@ plot_timing_splits <-
     } else {
       str_to_lower(label)
     }
-    
+
     data |>
       mutate(
         team_colours = case_when(
@@ -697,14 +722,16 @@ plot_timing_splits <-
         )
       ) |>
       ggplot(aes(season, !!stat)) +
-      geom_hline(yintercept = 0, colour = "grey20",
-                 linetype = "dashed", linewidth = 1) +
+      geom_hline(
+        yintercept = 0, colour = "grey20",
+        linetype = "dashed", linewidth = 1
+      ) +
       geom_smooth(aes(colour = team_colours, alpha = team_alpha),
-                  method = lm, formula = y ~ splines::bs(x),
-                  se = FALSE, linewidth = 1.2
+        method = lm, formula = y ~ splines::bs(x),
+        se = FALSE, linewidth = 1.2
       ) +
       geom_point(aes(fill = team_colours, alpha = team_alpha, size = team_size),
-                 shape = 21, stroke = 1
+        shape = 21, stroke = 1
       ) +
       facet_wrap(vars(timing)) +
       scale_colour_identity() +
@@ -732,9 +759,9 @@ plot_timing_splits <-
       ) +
       theme_ftw() +
       theme(axis.text.x = element_text(angle = 30, vjust = 0.5, hjust = 0.5))
-    
-    
+
+
     ggsave(here::here("figures", paste0(file, "_timings.png")),
-           dpi = 320, width = 20, height = 10
+      dpi = 320, width = 20, height = 10
     )
   }
