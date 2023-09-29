@@ -8,11 +8,11 @@ The plots produced are below (and can be found in the /figures subdirectory).
 
 ![](figures/bvb_game_state.png)
 
+![](figures/shots_comparison.png)
+
 ![](figures/goals_comparison.png)
 
 ![](figures/xg_comparison.png)
-
-![](figures/shots_comparison.png)
 
 ## Points Dropped from Winning Positions
 
@@ -30,9 +30,8 @@ The plots produced are below (and can be found in the /figures subdirectory).
 
 ![](figures/timings.png)
 
+![](figures/shots_timings.png)
+
 ![](figures/goals_timings.png)
 
 ![](figures/xg_timings.png)
-
-![](figures/shots_timings.png)
-
